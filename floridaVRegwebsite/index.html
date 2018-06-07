@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<link rel="shortcut icon" href="http://ui.floridadems.org/images/favicon.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>     
+    <!--Import Google Icon Font-->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- app css -->
+<link rel="stylesheet" type="text/css" href="./css/style.css">
+
+    <!--Let browser know website is optimized for mobile-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+    <!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+
+        <!-- Signature Requirements -->          
+<!-- <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/south-street/jquery-ui.css" rel="stylesheet"> -->
+<link href="css/jquery.signature.css" rel="stylesheet">
+<style>
+.kbw-signature { width: 400px; height: 200px; }
+</style>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> 
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+<script src="js/jquery.signature.js"></script>
+<script>
+$(function() {
+	var sig = $('#sig').signature();
+	$('#disable').click(function() {
+		var disable = $(this).text() === 'Disable';
+		$(this).text(disable ? 'Enable' : 'Disable');
+		sig.signature(disable ? 'disable' : 'enable');
+	});
+	$('#clear').click(function() {
+		sig.signature('clear');
+	});
+	$('#json').click(function() {
+		alert(sig.signature('toJSON'));
+	});
+	$('#svg').click(function() {
+		alert(sig.signature('toSVG'));
+	});
+});
+</script>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+
+        <div id= "regTitle" class="collapsible-header">
+          
+            <h4>Remote Voter Registration</h4>
+            <!-- <span class="badge"></span> -->
+       </div>
+
+        <ul class="collapsible">
+            <li>
+              <div class="collapsible-header">
+                      <i class="material-icons icn">assignment</i>
+                      <h4>Voter Information</h4>
+                      <!-- <span class="badge"></span> -->
+              </div>
+                        <div class="row">
+
+                        <form class="col s12">
+                          <div class="row">
+                            <div class="input-field col s6">
+                              <input id="first_name" type="text" class="validate">
+                              <label for="first_name">First Name</label>
+                            </div>
+                            <div class="input-field col s6">
+                              <input id="last_name" type="text" class="validate">
+                              <label for="last_name">Last Name</label>
+                            </div>
+                          </div>
+
+
+
+                          <div class="row">
+                            <div class="input-field col s12">
+                              <input id="dob" type="text" class="validate">
+                              <label for="dob">Date of Birth (format)</label>
+                            </div>
+                          </div>
+                          <div class="row">
+                              <div class="input-field col s12">
+                                  <select id="countySel" >
+                                    <option value="" disabled selected>Choose your County</option>
+                                    <option value="4"></option>Alachua</option>
+                                    <option value="5"></option>Baker</option>
+                                    <option value="6"></option>Bay</option>
+                                    <option value="7"></option>Bradford</option>
+                                    <option value="8"></option>Brevard</option>
+                                    <option value="9"></option>Broward</option>
+                                    <option value="10"></option>Calhoun</option>
+                                    <option value="12"></option>Charlotte</option>
+                                    <option value="13"></option>Citrus</option>
+                                    <option value="14"></option>Clay</option>
+                                    <option value="15"></option>Collier</option>
+                                    <option value="16"></option>Columbia</option>
+                                    <option value="17"></option>DeSoto</option>
+                                    <option value="18"></option>Dixie</option>
+                                    <option value="19"></option>Duval</option>
+                                    <option value="21"></option>Escambia</option>
+                                    <option value="22"></option>Flagler</option>
+                                    <option value="23"></option>Franklin</option>
+                                    <option value="24"></option>Gadsden</option>
+                                    <option value="25"></option>Gilchrist</option>
+                                    <option value="26"></option>Glades</option>
+                                    <option value="27"></option>Gulf</option>
+                                    <option value="28"></option>Hamilton</option>
+                                    <option value="29"></option>Hardee</option>
+                                    <option value="30"></option>Hendry</option>
+                                    <option value="31"></option>Hernando</option>
+                                    <option value="32"></option>Highlands</option>
+                                    <option value="33"></option>Hillsborough</option>
+                                    <option value="34"></option>Holmes</option>
+                                    <option value="35"></option>Indian River</option>
+                                    <option value="36"></option>Jackson</option>
+                                    <option value="37"></option>Jefferson</option>
+                                    <option value="38"></option>Lafayette</option>
+                                    <option value="39"></option>Lake</option>
+                                    <option value="40"></option>Lee</option>
+                                    <option value="41"></option>Leon</option>
+                                    <option value="42"></option>Levy</option>
+                                    <option value="43"></option>Liberty</option>
+                                    <option value="44"></option>Madison</option>
+                                    <option value="45"></option>Manatee</option>
+                                    <option value="46"></option>Marion</option>
+                                    <option value="47"></option>Martin</option>
+                                    <option value="48"></option>Miami-Dade</option>
+                                    <option value="49"></option>Monroe</option>
+                                    <option value="50"></option>Nassau</option>
+                                    <option value="51"></option>Okaloosa</option>
+                                    <option value="52"></option>Okeechobee</option>
+                                    <option value="53"></option>Orange</option>
+                                    <option value="54"></option>Osceola</option>
+                                    <option value="55"></option>Palm Beach</option>
+                                    <option value="56"></option>Pasco</option>
+                                    <option value="57"></option>Pinellas</option>
+                                    <option value="58"></option>Polk</option>
+                                    <option value="59"></option>Putnam</option>
+                                    <option value="60"></option>St. Johns</option>
+                                    <option value="61"></option>St. Lucie</option>
+                                    <option value="62"></option>Santa Rosa</option>
+                                    <option value="63"></option>Sarasota</option>
+                                    <option value="64"></option>Seminole</option>
+                                    <option value="65"></option>Sumter</option>
+                                    <option value="66"></option>Suwannee</option>
+                                    <option value="67"></option>Taylor</option>
+                                    <option value="68"></option>Union</option>
+                                    <option value="68"></option>Volusia</option>
+                                    <option value="69"></option>Wakulla
+                                    <option value="70"></option>Walton</option>
+                                    <option value="71"></option>Washington</option>
+
+                                  </select>
+                                  <label>County Registered to Vote</label>
+                                </div>
+                          </div>
+                          <div class="row">
+                            <div class="input-field col s12">
+                              <input id="email" type="email" class="validate">
+                              <label for="email">Email</label>
+                            </div>
+                          </div>
+                        
+                          <div class="row">
+                              <div class="input-field col s6">
+                                <input id="cityReg" type="text" class="validate">
+                                <label for="cityReg">City Registered to Vote</label>
+                              </div>
+                              <div class="input-field col s6">
+                                <input id="zipReg" type="text" class="validate">
+                                <label for="zipReg">Zipcode Registered to Vote</label>
+                              </div>
+                          </div>
+                        </form>
+                      </div>
+                <div class="collapsible-header">
+                  <i class="material-icons icn">place</i>
+                  <h4>Ballot Destination</h4> 
+                  <span class="badge"></span></div>
+                
+                  
+                    <div class="row">
+                        <form class="col s12">
+                            <div class="row">
+                                <div class="input-field col s12">
+                                  <input id="destAdd" type="text" class="validate">
+                                  <label for="destAdd">Address</label>
+                                </div>
+                              </div>
+                          <div class="row">
+                            <div class="input-field col s6">
+                              <input id="destCity" type="text" class="validate">
+                              <label for="destCity">City</label>
+                            </div>
+                            <div class="input-field col s6">
+                              <input id="destState" type="text" class="validate">
+                              <label for="destState">State/Territory</label>
+                            </div>
+                          </div>
+                          <div class="row">
+                              <div class="input-field col s6">
+                                <input id="destCode" type="text" class="validate">
+                                <label for="destCode">Postal Code</label>
+                              </div>
+                              <div class="input-field col s6">
+                                <input id="destCntry" type="text" class="validate">
+                                <label for="destCntry">Country</label>
+                              </div>
+                            </div>
+                
+                          <div class="row">
+                            <div id="signdiv" class="input-field col s12">
+
+                                <label for="signdiv">Sign Here</label>
+                              
+                                <div id="sig"></div>
+                                <p style="clear: both;">
+                                  <button class="btn waves-effect waves-light btn-small" id="disable">Disable</button> 
+                                  <button class="btn waves-effect waves-light btn-small" id="clear">Clear</button> 
+                                  <button class="btn waves-effect waves-light btn-small" id="json">To JSON</button>
+                                  <button class="btn waves-effect waves-light btn-small" id="svg">To SVG</button>
+                                </p>
+                        
+                            </div>
+                          
+                      </div>
+                          
+                     
+
+        
+      </form>
+   
+                          <button id ="submitbutton" class="btn right waves-effect waves-light btn-large" type="submit" name="action">Submit
+                                  <i class="material-icons right">send</i>
+                          </button>
+              </p>
+              </div>
+
+            </li>
+        
+        </ul>
+        </div>
+
+
+<script>
+  $(document).ready(function(){
+    console.log("hi")
+    $('#countySel').attr("class", "browser-default")
+  });
+</script>
+
+  <!-- https://plugins.jquery.com/kbw.signature/
+  http://keith-wood.name/signature.html -->
+
+</body>
+
+</html>
